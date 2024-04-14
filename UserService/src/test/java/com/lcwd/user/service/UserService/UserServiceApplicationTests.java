@@ -1,8 +1,11 @@
 package com.lcwd.user.service.UserService;
 
+import com.lcwd.user.service.UserService.entities.Rating;
+import com.lcwd.user.service.UserService.external.service.RatingService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -11,6 +14,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 
 class UserServiceApplicationTests {
+
+	@Autowired
+	private RatingService ratingService;
+
+//	@Test
+//	void createRating(){
+//		Rating rating = Rating.builder().rating(10).userId(" ").hotelId(" ").feedback("this is crated by feign clint").build();
+//		Rating savedRating = ratingService.createRating(rating);
+//
+//		System.out.println("new rating crated...");
+//	}
+
+
+
+
+
+
+
+
+
 
 	Calculater cal= new Calculater();
 	@Test

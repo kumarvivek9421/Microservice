@@ -37,11 +37,11 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     public List<Rating> getRatingByUserId(String userId) {
-        return ratingRepository.findRatingByUserId(userId);
+        return ratingRepository.findByUserId(userId);
     }
 
     public List<Rating> getRatingByHotelId(String hotelId){
-        return ratingRepository.findRatingByHotelId(hotelId);
+        return ratingRepository.findByHotelId(hotelId);
     }
     @Override
     public Rating updateRating(Rating rating, String ratingId) {

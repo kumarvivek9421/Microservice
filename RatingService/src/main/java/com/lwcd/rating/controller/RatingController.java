@@ -28,15 +28,15 @@ public class RatingController {
         return ResponseEntity.ok(ratingService.getAllRating());
     }
 
-//    getAll Rating By UserId (URL= http://localhost:8082/api/ratings/userId )
-    @GetMapping("/{userId}")
-    public ResponseEntity<List<Rating>> getAllRatingByUserId(String userId){
+//    getAll Rating By UserId (URL= http://localhost:8082/api/ratings/users/{userId} )
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<List<Rating>> getRatingByUserId(@PathVariable String userId){
         return ResponseEntity.ok(ratingService.getRatingByUserId(userId));
     }
 
-//    getAll Rating By HotelId (URL= http://localhost:8082/api/ratings/hotelId )
-    @GetMapping("/{hotelId}")
-    public ResponseEntity<List<Rating>> getAllRatingByHotelId(String hotelId){
+//    getAll Rating By HotelId (URL= http://localhost:8082/api/ratings/hotels/hotelId )
+    @GetMapping("/hotels/{hotelId}")
+    public ResponseEntity<List<Rating>> getRatingByHotelId(@PathVariable String hotelId){
         return ResponseEntity.ok(ratingService.getRatingByHotelId(hotelId));
     }
 

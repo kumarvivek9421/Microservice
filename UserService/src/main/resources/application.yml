@@ -20,4 +20,4 @@
 #      fetch-registry: true
 #      register-with-eureka: ture
 #      service-url:
-#        defaultZone: http://localhost:9090/eureka
+#        defaultZone: http://localhost:8761/eureka

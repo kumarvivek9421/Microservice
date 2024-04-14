@@ -11,21 +11,23 @@ spring:
         - id: USER-SERVICE
           uri: lb://USER-SERVICE
           predicates:
-            - path=/api/users/**
+            - Path=/api/users/**
 
         - id: HOTEL-SERVICE
           uri: lb://HOTEL-SERVICE
           predicates:
-            - path=/api/hotel/**
+            - Path=/api/hotel/**
 
         - id: RATING-SERVICE
           uri: lb://RATING-SERVICE
           predicates:
-            - path=/api/ratings/**
+            - Path=/api/ratings/**
 
 eureka:
   instance:
-  prefer-id-address: ture
-  client.fetch-registry: true
-  register-with-eureka: ture
-  service-url.defaultZone: http://localhost:8761/eureka
+    prefer-ip-address: true
+    client:
+      fetch-registry: true
+      register-with-eureka: ture
+      service-url:
+        defaultZone: http://localhost:8761/eureka

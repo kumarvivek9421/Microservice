@@ -8,7 +8,7 @@ import java.util.List;
 public interface RatingRepository extends JpaRepository<Rating, String> {
 
 //    custom finder methods
-    List<Rating> findRatingByUserId(String userId);
-    List<Rating>findRatingByHotelId(String hotelId);
+    List<Rating> findByUserId(String userId);
+    List<Rating>findByHotelId(String hotelId);
 
 }
